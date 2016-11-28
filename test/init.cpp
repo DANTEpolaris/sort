@@ -7,7 +7,7 @@ using namespace std;
 
 SCENARIO("8mb", "[8mb]")
 {
-  sort("8mb", "out_8", 1);
+  sortirovka("8mb", "out_8", 1);
   bool x = true;
   ifstream f1("out_8"), f2("out8");
   line s1, s2;
@@ -30,7 +30,7 @@ SCENARIO("8mb", "[8mb]")
 
 SCENARIO("15mb", "[15mb]")
 {
-  sort("15mb", "out_15", 4);
+  sortirovka("15mb", "out_15", 4);
   bool x = true;
   ifstream f1("out_15"), f2("out15");
   line s1, s2;
@@ -53,7 +53,7 @@ SCENARIO("15mb", "[15mb]")
 
 SCENARIO("32mb", "[32mb]")
 {
-  sort("32mb", "out_32", 17);
+  sortirovka("32mb", "out_32", 17);
   bool x = true;
   ifstream f1("out_32"), f2("out32");
   line s1, s2;
