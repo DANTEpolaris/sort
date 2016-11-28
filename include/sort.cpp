@@ -18,14 +18,14 @@ struct line
 	}
 };
 
-bool operator < (const line& s1, const line& s2)
+bool operator < (const line& line1, const line& line2)
 {
-	return (s1.name < s2.name);
+	return (line1.name < line2.name);
 }
 
-bool operator >(const line& s1, const line& s2)
+bool operator >(const line& line1, const line& line2)
 {
-	return (s1.name > s2.name);
+	return (line1.name > line2.name);
 }
 
 ostream & operator<<(ostream & output, line const & str)
@@ -45,9 +45,9 @@ bool operator != (line s, string str)
 	return (s.surname != str);
 }
 
-struct s_i
+struct constr
 {
-	line s;
+	line line_;
 	ifstream *f;
 	s_i(const line& s_, ifstream* f_) : s(s_), f(f_) {}
 };
@@ -81,7 +81,7 @@ void sortirovka(const string input_name, const string output_name, const short m
 		fout_.close();
 	}
 	fin.close();
-	priority_queue<s_i> pq;
+	priority_queue<constr> pq;
 	for (size_t i = 0; i < k; ++i)
 	{
 		ifstream* f_ = new ifstream(to_string(i + 1));
@@ -92,7 +92,7 @@ void sortirovka(const string input_name, const string output_name, const short m
 	}
 	while (!pq.empty())
 	{
-		s_i si = pq.top();
+		constr si = pq.top();
 		pq.pop();
 		if (si.s != "") fout << si.s << endl;
 		if (!(*si.f).eof() && (*si.f >> si.s))
