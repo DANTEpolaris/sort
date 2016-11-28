@@ -1,30 +1,3 @@
-
-Skip to content
-This repository
-
-    Pull requests
-    Issues
-    Gist
-
-    @DANTEpolaris
-
-1
-0
-
-    0
-
-NickolasDePiton/Vnesh_Sort
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Pulse
-Graphs
-Vnesh_Sort/.travis.yml
-129b0b5 7 days ago
-@NickolasDePiton NickolasDePiton Update .travis.yml
-76 lines (71 sloc) 2.04 KB
 dist: precise
 language: generic
 
@@ -99,8 +72,3 @@ script:
     - cmake -DGLOBAL_PROJECT_NAME=sort ..
     - make
     - make test ARGS="-VV"
-
-    Contact GitHub API Training Shop Blog About 
-
-    © 2016 GitHub, Inc. Terms Privacy Security Status Help 
-
