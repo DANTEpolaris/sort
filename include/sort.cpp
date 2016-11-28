@@ -49,12 +49,12 @@ struct constr
 {
 	line line_;
 	ifstream *f;
-	s_i(const line& s_, ifstream* f_) : s(s_), f(f_) {}
+	constr(const line& s_, ifstream* f_) : s(s_), f(f_) {}
 };
 
-bool operator < (const s_i& s_i1, const s_i& s_i2)
+bool operator < (const constr& constr1, const constr& constr2)
 {
-	return (s_i1.s > s_i2.s);
+	return (constr1.s > constr2.s);
 }
 
 void sortirovka(const string input_name, const string output_name, const short mem_size)
