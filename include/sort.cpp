@@ -94,8 +94,8 @@ void sortirovka(const string input_name, const string output_name, const short m
 	{
 		constr si = pq.top();
 		pq.pop();
-		if (si.s != "") fout << si.s << endl;
-		if (!(*si.f).eof() && (*si.f >> si.s))
+		if (si.line_ != "") fout << si.line_ << endl;
+		if (!(*si.f).eof() && (*si.f >> si.line_))
 		{
 			pq.push(si);
 		}
