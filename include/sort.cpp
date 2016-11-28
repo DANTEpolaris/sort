@@ -54,7 +54,7 @@ struct constr
 
 bool operator < (const constr& constr1, const constr& constr2)
 {
-	return (constr1.s > constr2.s);
+	return (constr1.line_ > constr2.line_);
 }
 
 void sortirovka(const string input_name, const string output_name, const short mem_size)
