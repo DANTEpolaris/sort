@@ -49,7 +49,7 @@ struct constr
 {
 	line line_;
 	ifstream *f;
-	constr(const line& s_, ifstream* f_) : s(s_), f(f_) {}
+	constr(const line& s_, ifstream* f_) : line_(s_), f(f_) {}
 };
 
 bool operator < (const constr& constr1, const constr& constr2)
@@ -87,7 +87,7 @@ void sortirovka(const string input_name, const string output_name, const short m
 		ifstream* f_ = new ifstream(to_string(i + 1));
 		line str;
 		*f_ >> str;
-		s_i si(str, f_);
+		constr si(str, f_);
 		pq.push(si);
 	}
 	while (!pq.empty())
